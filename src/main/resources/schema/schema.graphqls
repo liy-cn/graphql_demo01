@@ -1,0 +1,23 @@
+type Query {
+    products(skuIdFilter: String) : [Product]
+}
+
+type Product {
+    skuId: String
+    name: String
+    category : Category
+    storeInfo: StoreInfo
+    mobiledesc: String
+}
+
+type StoreInfo {
+    storeId: Int
+    storeName: String
+    outerId: String
+}
+
+type Category {
+    categoryId: String
+    categoryName: String
+    parentCategoryId: String
+}
